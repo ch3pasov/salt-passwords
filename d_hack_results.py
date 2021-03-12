@@ -7,6 +7,8 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("size", type=int, help="size of ur db")
+parser.add_argument("-s", "--salted", action="store_true",
+                    help="salt passwords")
 args = parser.parse_args()
 
 
@@ -14,7 +16,11 @@ adress = os.path.dirname(__file__)
 start_time = time.time()
 
 db_size = args.size
-data = pd.read_csv(f'{adress}/files/crafted/unsalt_db_hacked_{db_size}.csv',
+if args.salted:
+    db_type = 'salted'
+else:
+    db_type = 'unsalt'
+data = pd.read_csv(f'{adress}/files/crafted/{db_type}_db_hacked_{db_size}.csv',
                    index_col=0)
 
 non_nan = data.count()
