@@ -31,8 +31,8 @@ start_loop_time = time.time()
 for i in range(len(data)):
     for j in range(len(top_200)):
         if sha(f'id{str(indexes[i])}+',
-               top_200_passwords[j]) == data.loc[i]['hash']:
-            data.loc[i, 'password'] = top_200_passwords[j]
+               top_200_passwords[j]) == data.loc[data.index[i]]['hash']:
+            data.loc[data.index[i], 'password'] = top_200_passwords[j]
             break
 
     if not benchmark:

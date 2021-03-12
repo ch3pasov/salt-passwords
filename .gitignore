@@ -1,5 +1,6 @@
 *files/crafted/unsalt_db_*.csv
 *files/crafted/salted_db_*.csv
+*files/crafted/vip_hacked.csv
 *.DS_Store*
 *_pycache_*
 *t.co*
