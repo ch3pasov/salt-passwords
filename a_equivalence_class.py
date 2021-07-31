@@ -25,15 +25,15 @@ toshow = data.hash.value_counts()
 
 print(toshow[:10])
 
-if not args.salted:
-    top_1 = toshow[:1].index[0]
-
-    top_200_1 = hex(sha_256.sha_256_text('12345').arg)
-
-    print(f'top-1 from  bd : {top_1}')
-    print(f'top-1 from song: {top_200_1}')
-
-    print('PWNED! Password is "12345"' * (top_1 == top_200_1) +
-          'nice try, bad luck' * ((top_1 != top_200_1)))
-
-    print(f"--- {(time.time() - start_time)} seconds ---")
+# if not args.salted:
+#     top_1 = toshow[:1].index[0]
+#
+#     top_200_1 = hex(sha_256.sha_256_text('12345').arg)
+#
+#     print(f'top-1 from  bd : {top_1}')
+#     print(f'top-1 from song: {top_200_1}')
+#
+#     print('PWNED! Password is "12345"' * (top_1 == top_200_1) +
+#           'nice try, bad luck' * ((top_1 != top_200_1)))
+#
+#     print(f"--- {(time.time() - start_time)} seconds ---")
