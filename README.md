@@ -62,3 +62,5 @@ $ python3 e_salted_aimed_hack.py
 ```
 $ python3 hash.py -v <string>
 ```
+
+Good luck!
